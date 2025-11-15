@@ -80,9 +80,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 		response.getWriter().write(new ObjectMapper().writeValueAsString(httpResponse));
 		response.setStatus(HttpStatus.OK.value());
 		response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-		//response.getWriter();
 				
-		//super.successfulAuthentication(request, response, chain, authResult);
 	}
 
 }

@@ -1,12 +1,7 @@
 package com.user_management.entity;
 
-import java.util.Collection;
 import java.util.Set;
-import java.util.stream.Collectors;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
@@ -44,7 +39,7 @@ public class User {
 	private String password;
 	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.MERGE }, targetEntity = Role.class)
-	@JoinTable( // tabla intermedia para roles
+	@JoinTable( // intermediate table for roles
 			name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles;
 

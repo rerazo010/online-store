@@ -21,6 +21,5 @@ public class Role {
     private Long id;
     @NotNull
     @Enumerated(EnumType.STRING)
-    private ERole name; // ej. "ROLE_USER", "ROLE_ADMIN"
-    // getters/setters
+    private ERole name; 
 }

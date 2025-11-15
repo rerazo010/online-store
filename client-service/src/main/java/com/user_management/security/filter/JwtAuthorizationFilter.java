@@ -33,7 +33,7 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
 		
 	    if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
 	        response.setStatus(HttpServletResponse.SC_OK);
-	        return; // 👈 muy importante: dejamos pasar el preflight
+	        return; 
 	    }
 
 		String tokenHeader = request.getHeader("Authorization");

@@ -27,7 +27,7 @@ public class JwtUtils {
 	private String timeExpiration;
 
 	/**
-	 * Generar token de acceso
+	 * Generate access token
 	 * 
 	 * @param username
 	 * @return
@@ -39,7 +39,7 @@ public class JwtUtils {
 	}
 
 	/**
-	 * Validar el token de acceso
+	 * Validate the access token
 	 * 
 	 * @param token
 	 * @return
@@ -61,7 +61,7 @@ public class JwtUtils {
 	}
 	
 	/**
-	 * Obtener el username del token
+	 * Get the token username
 	 * 
 	 * @param token
 	 * @return
@@ -71,7 +71,7 @@ public class JwtUtils {
 	}
 
 	/**
-	 * Obtener un solo claim.
+	 * Obtain a single claim.
 	 * 
 	 * @param <T>
 	 * @param token
@@ -84,7 +84,7 @@ public class JwtUtils {
 	}
 
 	/**
-	 * Obtener todos los claims.
+	 * Get all claims.
 	 * 
 	 * @param token
 	 * @return
@@ -94,7 +94,7 @@ public class JwtUtils {
 	}
 
 	/**
-	 * Obener firma del token
+	 * Obtain token signature 
 	 * 
 	 * @return key
 	 * @throws DecoderException

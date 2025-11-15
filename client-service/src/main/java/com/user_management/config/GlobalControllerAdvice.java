@@ -19,7 +19,7 @@ public class GlobalControllerAdvice {
     public ResponseEntity<Map<String,String>> handleTypeMismatch(MethodArgumentTypeMismatchException ex) {
         Map<String,String> error = Map.of(
             "field", ex.getName(),
-            "message", "El parámetro '" + ex.getName() + "' debe ser un número"
+            "message", "The '" + ex.getName() + "' parameter must be a number"
         );
         return ResponseEntity.badRequest().body(error);
     }

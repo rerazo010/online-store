@@ -2,7 +2,6 @@ package com.user_management;
 
 import java.util.Set;
 
-import com.user_management.entity.Role;
 
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.Email;

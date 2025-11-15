@@ -13,10 +13,10 @@ import com.user_management.enumeration.ERole;
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Serializable> {
 
-    // Método para encontrar un rol por su nombre
+    // Method to find a role by name
     Optional<Role> findByName(ERole name);
 
-    // Método para verificar si un rol existe por su nombre
+    // Method to check if a role exists by its name
     boolean existsByName(ERole name);
 
 }
