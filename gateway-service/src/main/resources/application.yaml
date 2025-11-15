@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+          globalcors:
+            corsConfigurations:
+              '[/**]':
+                allowedOrigins:
+                  - "http://localhost:3001"
+                allowedMethods:
+                  - GET
+                  - POST
+                  - PUT
+                  - DELETE
+                  - OPTIONS
+                allowedHeaders:
+                  - "*"
+                allowCredentials: true
+          routes:
+            - id: user-login
+              uri: lb://client-service
+              predicates: 
+                - Path=/login
+            - id: user-create
+              uri: lb://client-service
+              predicates: 
+                - Path=/user/create
+            - id: user-test
+              uri: lb://client-service
+              predicates: 
+                - Path=/test
+            - id: user-all
+              uri: lb://client-service
+              predicates:
+                - Path=/user/all
+            - id: store.online
+              uri: lb://store.online
+              predicates:
+                - Path=/api/**
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka:password@localhost:8761/eureka/ 
+
+logging:
+  level:
+    root: info
+    org:
+      springframework:
+        cloud:
+          gateway: trace

@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.user-management</groupId>
-	<artifactId>user-management</artifactId>
+	<artifactId>client-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>user-management</name>
+	<name>client-service</name>
 	<description>Security APP</description>
 	<url />
 	<licenses>
