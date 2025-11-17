@@ -46,6 +46,7 @@ public class SecurityConfig {
 					aut.requestMatchers("/login").permitAll();
 					aut.requestMatchers("/user/create").permitAll();
 					aut.requestMatchers("/swagger-ui/index.html").permitAll();
+					aut.requestMatchers("/error").permitAll();
 					aut.anyRequest().authenticated();
 				}).sessionManagement(session -> {
 					session.sessionCreationPolicy(SessionCreationPolicy.STATELESS);

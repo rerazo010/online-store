@@ -24,8 +24,5 @@ public class OrderDTO {
     private BigDecimal totalAmount;
 
 	@NotNull
-    private String status;
-
-	@NotNull
     private List<OrderDetailDTO> details;
 }

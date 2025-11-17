@@ -27,7 +27,7 @@ public class OrderServiceImpl implements OrderService {
 		Order order = new Order();
 		order.setUserId(orderDTO.getUserId());
 		order.setTotalAmount(orderDTO.getTotalAmount());
-		order.setStatus(orderDTO.getStatus());
+		order.setStatus("CREATED");
 		order.setCreateDate(new Date());
 
 		List<OrderDetail> details = new ArrayList<>();

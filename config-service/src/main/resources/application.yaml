@@ -19,7 +19,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka:password@localhost:8761/eureka/
+      defaultZone: http://${user_eureka}:${pass_eureka}@localhost:8761/eureka/
 
 encrypt:
   key: ${key}
